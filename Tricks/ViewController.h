@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak,nonatomic) IBOutlet UITextView*consoleView;
+-(IBAction)actionTest:(id) sender;
+
+-(void)insertConsoleView: (NSDictionary*) dictionary;
 
 @end
 

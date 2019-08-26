@@ -9,10 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-NSString* fancyDateStringFromDate(NSDate*date);
+extern NSString* const AVNotificationLogConsole;
+extern NSString* const AVNotificationLogConsoleUserInfoKey;
 
-BOOL iPad(void);
-BOOL iPhone(void);
+
+#define APP_SHORT_NAME @"MACRO"
+
+#define PRODUCTION_BUILD
+
+#define LOG_ENABLE 1
+
+#define RGBA(r,g,b,a) [UIColor colorWithRed: r/255.f green: g/255.f blue: b/255.f alpha: a/255.f]
 
 typedef enum{
     ASProgrammerTypeJunior,
@@ -20,4 +27,13 @@ typedef enum{
     ASProgrammerTypeSenior
 }ASProgrammerType;
 
+NSString* fancyDateStringFromDate(NSDate*date);
+
+BOOL iPad(void);
+BOOL iPhone(void);
+
 NSString*NSStringFromASProgrammerType(ASProgrammerType programmerType);
+
+void AVSLog(NSString*format, ...);
+
+

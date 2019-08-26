@@ -8,6 +8,14 @@
 
 #import "AVUtils.h"
 
+
+
+//NSString* const  AVNotificationLog = @"AVNotificationLog";
+//NSString* const AVNotificationLogUserInfoKey = @"AVNotificationLogUserInfoKey";
+
+NSString* const AVNotificationLogConsole = @"AVNotificationLogConsole";
+NSString* const AVNotificationLogConsoleUserInfoKey = @"AVNotificationLogConsoleUserInfoKey";
+
 NSString* fancyDateStringFromDate(NSDate*date){
 
     static NSDateFormatter*formater = nil;
@@ -40,4 +48,34 @@ NSString*NSStringFromASProgrammerType(ASProgrammerType programmerType){
             break;
     }
 }
+
+void AVSLog(NSString*format, ...){
+
+#ifdef PRODUCTION_BUILD
+
+    #if LOG_ENABLE
+
+        va_list argumentList;
+            va_start(argumentList,format);
+            NSLogv(format, argumentList);
+        va_end(argumentList);
+    
+    #endif
+
+    NSString* log = [[NSString alloc] initWithFormat:format arguments:argumentList];
+
+    //NSString* const AVNotificationLog = @"AVNotificationLog";
+    //NSString* const AVNotificationLogKey = @"AVNotificationLogKey";
+
+    NSDictionary*dictionary = [[NSDictionary alloc]initWithObjectsAndKeys:
+                               log,AVNotificationLogConsoleUserInfoKey,
+                               nil];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName: AVNotificationLogConsole object:nil userInfo:dictionary];
+
+
+#endif 
+
+}
+
 
