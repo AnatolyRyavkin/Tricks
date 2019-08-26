@@ -27,3 +27,17 @@ BOOL iPhone(){
     return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone);
 }
 
+NSString*NSStringFromASProgrammerType(ASProgrammerType programmerType){
+    switch (programmerType) {
+        case ASProgrammerTypeJunior:
+            return @"Hi is a junior";
+        case ASProgrammerTypeMid:
+            return @"Hi is a mid";
+        case ASProgrammerTypeSenior:
+            NSLog(@"Hi is a senior - very math programmer");
+            return @"senior";
+        default:
+            break;
+    }
+}
+

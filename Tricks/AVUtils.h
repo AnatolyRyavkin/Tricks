@@ -13,3 +13,11 @@ NSString* fancyDateStringFromDate(NSDate*date);
 
 BOOL iPad(void);
 BOOL iPhone(void);
+
+typedef enum{
+    ASProgrammerTypeJunior,
+    ASProgrammerTypeMid,
+    ASProgrammerTypeSenior
+}ASProgrammerType;
+
+NSString*NSStringFromASProgrammerType(ASProgrammerType programmerType);

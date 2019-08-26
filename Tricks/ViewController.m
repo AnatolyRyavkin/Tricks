@@ -27,6 +27,16 @@
         NSLog(@"This is iPhone");
     }
 
+    ASProgrammerType programmerSenior = ASProgrammerTypeSenior;
+    ASProgrammerType programmerMid = ASProgrammerTypeMid;
+    ASProgrammerType programmerJunior = ASProgrammerTypeJunior;
+
+    NSLog(@"%@",NSStringFromASProgrammerType(programmerMid));
+    NSLog(@"%@",NSStringFromASProgrammerType(programmerJunior));
+    NSLog(@"%@",NSStringFromASProgrammerType(programmerSenior));
+
+
+
 }
 
 
