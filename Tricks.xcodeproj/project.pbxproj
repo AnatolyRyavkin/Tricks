@@ -13,6 +13,7 @@
 		FD89855A2313D26B00B69737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8985592313D26B00B69737 /* Assets.xcassets */; };
 		FD89855D2313D26B00B69737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD89855B2313D26B00B69737 /* LaunchScreen.storyboard */; };
 		FD8985602313D26B00B69737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD89855F2313D26B00B69737 /* main.m */; };
+		FD8985682313D35C00B69737 /* AVUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8985672313D35C00B69737 /* AVUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		FD89855C2313D26B00B69737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD89855E2313D26B00B69737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD89855F2313D26B00B69737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD8985662313D35C00B69737 /* AVUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVUtils.h; sourceTree = "<group>"; };
+		FD8985672313D35C00B69737 /* AVUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		FD89854F2313D26600B69737 /* Tricks */ = {
 			isa = PBXGroup;
 			children = (
+				FD8985662313D35C00B69737 /* AVUtils.h */,
+				FD8985672313D35C00B69737 /* AVUtils.m */,
 				FD8985502313D26700B69737 /* AppDelegate.h */,
 				FD8985512313D26700B69737 /* AppDelegate.m */,
 				FD8985532313D26700B69737 /* ViewController.h */,
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8985682313D35C00B69737 /* AVUtils.m in Sources */,
 				FD8985552313D26700B69737 /* ViewController.m in Sources */,
 				FD8985602313D26B00B69737 /* main.m in Sources */,
 				FD8985522313D26700B69737 /* AppDelegate.m in Sources */,

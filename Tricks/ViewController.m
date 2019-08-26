@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AVUtils.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"%@",fancyDateStringFromDate([NSDate date]));
+
+    if(iPad()){
+        NSLog(@"This is iPad");
+    }
+
+    if(iPhone()){
+        NSLog(@"This is iPhone");
+    }
+
 }
 
 
