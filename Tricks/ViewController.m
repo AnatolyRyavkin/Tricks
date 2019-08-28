@@ -28,10 +28,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+
+    //[[UIButton appearanceWhenContainedIn:[UIView class],nil] setTitleColor:RGBA(100, 100, 100, 255) forState:UIControlStateNormal];
+
+
+
+#if TEST
+
+    //[[UIButton appearance] setTitleColor:RGBA(0, 255, 0, 255) forState:UIControlStateNormal];
+    [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UIView class]]] setTitleColor:RGBA(100, 100, 100, 255) forState:UIControlStateNormal];
+
+#endif
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertConsoleView:) name:AVNotificationLogConsole object:nil];
 
-    [[NSNotificationCenter defaultCenter]addObserverForName:AVNotificationLogConsole object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        NSDictionary*dictionary = note.userInfo;
+    [[NSNotificationCenter defaultCenter]addObserverForName:AVNotificationLogConsole object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull notification) {
+        NSDictionary*dictionary = notification.userInfo;
         NSString*newString = [dictionary objectForKey:AVNotificationLogConsoleUserInfoKey];
         self.consoleView.text = [NSString stringWithFormat:@"%@ \n  %@", self.consoleView.text,newString];
     }];

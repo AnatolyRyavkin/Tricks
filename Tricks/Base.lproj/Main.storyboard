@@ -30,11 +30,17 @@
                                 <rect key="frame" x="311" y="458" width="143" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <state key="normal" title="Test"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                </state>
                                 <connections>
                                     <action selector="actionTest:" destination="BYZ-38-t0r" eventType="touchDown" id="Dum-Vc-5cK"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.png" translatesAutoresizingMaskIntoConstraints="NO" id="jYZ-mC-7XX">
+                                <rect key="frame" x="238" y="175" width="240" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,4 +54,7 @@
             <point key="canvasLocation" x="131.25" y="125.97656249999999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image.png" width="768" height="1024"/>
+    </resources>
 </document>
